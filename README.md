@@ -44,6 +44,11 @@ $ yarn run start:dev
 # production mode
 $ yarn run start:prod
 ```
+## Levantar Base de datos
+
+```bash
+$ docker-compose up -d
+```
 
 ## Test
 
