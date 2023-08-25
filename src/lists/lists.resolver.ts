@@ -68,7 +68,8 @@ export class ListsResolver {
   }
 
   @ResolveField( () => [ListItem], { name: 'items' } )//*Esto es para obtener las lista de ListItems (tabla pivote) en la tabla List
-  //! ya que es de tipo ListItem, podemos usar cualquiera de sus variables. En este caso podemos usar la variable "item" y de esta manera cuando lo usemos, nos saldrá con su respectiva variable de Item
+  //? ya que es de tipo ListItem, podemos usar cualquiera de sus variables. En este caso podemos usar la variable "item" y de esta manera cuando lo usemos, nos saldrá con su respectiva variable de Item
+  //! Creamos esto para usar la paginacion y usarlo en cualquier endpoint. De por sí, ya podemos ver ListItem en cualquier clase de List. Para verlo usamos el lazy, pero no incluye la paginacion. Ver en list.entity.ts, linea 16 @Field( () => [ListItem] )
   async getListItems(
     @Parent() list: List,
     @Args() paginationArgs: PaginationArgs,

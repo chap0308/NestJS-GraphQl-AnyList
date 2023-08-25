@@ -109,10 +109,8 @@ export class ListItemService {
     //   })
     //   .where('id = :id', { id })
 
-      let queryBuilder;
-
       for (const variableItem of itemId ) {//*solo es uno así que no es necesario hacerlo de esta manera, solo una vez va a iterar
-        queryBuilder = this.listItemsRepository
+        const queryBuilder = this.listItemsRepository
           .createQueryBuilder()
           .update()
           .set({

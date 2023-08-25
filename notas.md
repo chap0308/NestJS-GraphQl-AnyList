@@ -12,7 +12,7 @@ $ docker-compose up -d
 ## Para que lea las variables de entorno
 $ yarn add @nestjs/config
 
-## Usar typeORM
+## Usar typeORM(postgres)
 $ yarn add @nestjs/typeorm typeorm pg
 
 $ yarn add class-validator class-transformer

@@ -21,7 +21,7 @@ import { ListItemModule } from './list-item/list-item.module';
 @Module({
   imports: [
 
-    ConfigModule.forRoot(),
+    ConfigModule.forRoot(),//*para usar las variables de entorno
 
     // GraphQLModule.forRootAsync<ApolloDriverConfig>({
     //   driver: ApolloDriver,
