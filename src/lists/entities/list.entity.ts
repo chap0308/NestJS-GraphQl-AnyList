@@ -25,7 +25,7 @@ export class List {
   @OneToMany( () => ListItem, (listItem) => listItem.list, { lazy: true })//! por la relacion  @OneToMany, no veremos esta variable en nuestra tabla
   @Field( () => [ListItem] )//*con esto podemos usar la variable ListItem dentro del objeto List.
   //! En cualquier propiedad del objeto List se puede ver esto, gracias al Field.
-  // @Field( () => [ListItem] )
+  // @Field( () => [ListItem] )//* se deberia comentar para usar el resolveField, pero lo dejamos para notar una diferencia, uno saldrá con () por la paginacion, pero el otro será este sin ()
   listItem: ListItem[];
   
 }
